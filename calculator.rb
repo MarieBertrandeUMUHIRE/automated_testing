@@ -25,6 +25,10 @@ class Calculator
   def power(number, exponent)
     return number ** exponent
   end
+  def squareroot(number)
+    return Math.sqrt(number)
+  end
+
 end
 RSpec.describe Calculator do
   describe '#substraction' do
@@ -62,6 +66,12 @@ RSpec.describe Calculator do
   it 'should return the a powered number' do
       calculator = Calculator.new
       expect(calculator.power(5,2)).to eq(25)
+    end
+  end
+  describe '#square root' do
+  it 'should return the square root of a number' do
+      calculator = Calculator.new
+      expect(calculator.squareroot(25)).to eq(5)
     end
   end
 end
